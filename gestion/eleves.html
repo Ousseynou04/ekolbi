@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pages eleves</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <header>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                <!-- barre de navigation -->
+                <div class="container-fluid d-flex align-items-center">
+                    <a class="navbar-brand fw-bold mt-1 ms-3" href="#">ekolbi.Gestion</a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+                        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav mt-2 me-auto">
+                            <li class="nav-item"><a class="nav-link" href="tableau_de_bord.html">Tableau de Bord</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="eleves.html">Eleves</a></li>
+                            <li class="nav-item"><a class="nav-link" href="encaissement.html">Encaisser un paiement</a></li>
+                        </ul>
+                        <div class="d-flex mt-4"> 
+                            <p class="nav-item text-white">M. Abdoulaye Sow, directeur <a href="/index.html" class="text-white mx-3">Se déconnecter</a></p>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- section d'authentification -->
+            <section class="bg-light"> 
+                    <div class="container p-4">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h2 class="text-capitalize">élèves</h2>
+                                <a type="submit" href="eleve-form.html" class="btn btn-primary text-white rounded-3">inscrire un élève</a>
+                            </div>
+
+                            <div class="row align-items-center py-lg-0 py-3">
+                                <div class="col-12 col-lg-10">
+                                    <form action="#">
+                                        <div class="row g-3 mb-3">
+                                            <div class="col-md-6">
+                                                <label for="prenom" class="form-label">Rechercher un élève</label>
+                                                <input type="text" class="form-control" id="prenom">
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label for="classe" class="form-label">classe</label>
+                                                <select class="form-select" id="classe" required>
+                                                    <option value="classes">Toutes Les classes</option>
+                                                    <option value="CIA">CIA</option>
+                                                    <option value="CIB">CIB</option>
+                                                    <option value="CPA">CPA</option>
+                                                    <option value="CPB">CPB</option>
+                                                    <option value="CE1A">CE1A</option>
+                                                    <option value="CE1A">CE1B</option>
+                                                    <option value="CE2A">CE2A</option>
+                                                    <option value="CE2B">CE2B</option>
+                                                    <option value="CM1A">CM1A</option>
+                                                    <option value="CM1B">CM1B</option>
+                                                    <option value="CM2A">CM2A</option>
+                                                    <option value="CM1B">CM2B</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-12 col-lg-2 mt-3">
+                                    <a type="submit" href="tableau_de_bord.html" class="btn btn-outline-dark px-5 w-100 fw-semibold rounded-3">Filtrer</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="py-3 py-lg-0">
+                            <!-- tableau de recherche d'eleve -->
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr class="table-dark">
+                                        <th class="text-capitalize">élève</th>
+                                        <th>Classe</th>
+                                        <th>Né(e) le</th>
+                                        <th>Parent</th>
+                                        <th class="d-lg-table-cell d-none">situation</th>
+                                        <th class="d-lg-table-cell d-none">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Penda Sy</td>
+                                        <td>CI A</td>
+                                        <td>10/05/2020</td>
+                                        <td>Momar Sy</td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <p class="badge text-white bg-success text-capitalize">à Jour</p>
+                                        </td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <div>
+                                                <a href="#" class="btn btn-outline-success fw-semibold rounded-3">Modifier</a>
+                                                <!-- Modal button -->
+                                                <a type="button" class="btn btn-outline-danger fw-semibold rounded-3" data-bs-toggle="modal" data-bs-target="#modalId">
+                                                    Supprimer
+                                                </a>
+
+                                                <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" 
+                                                    role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="modalTitleId">Supprimer cet eleve</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">Les Paiements de cet eleve seront conservés dans l'historique.</div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                                                <button type="button" class="btn btn-danger">Supprimer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Oumou Ndiaye</td>
+                                        <td>CP A</td>
+                                        <td>10/05/2018</td>
+                                        <td>Souleymane Ndiaye</td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <p class="badge text-white bg-success text-capitalize">à Jour</p>
+                                        </td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <div>
+                                                <a href="#" class="btn btn-outline-success fw-semibold rounded-3">Modifier</a>
+                                                <!-- Modal trigger button -->
+                                                <a type="button" class="btn btn-outline-danger fw-semibold rounded-3" data-bs-toggle="modal" data-bs-target="#modalId">
+                                                    Supprimer
+                                                </a>
+
+                                                <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" 
+                                                    role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="modalTitleId">Supprimer cet eleve</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">Les Paiements de cet eleve seront conservés dans l'historique.</div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                                                <button type="button" class="btn btn-danger">Supprimer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Abdou Ndiaye</td>
+                                        <td>CE1 A</td>
+                                        <td>10/05/2019</td>
+                                        <td>Abdou Sané</td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <p class="badge text-white bg-success text-capitalize">à Jour</p>
+                                        </td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <div>
+                                                <a href="#" class="btn btn-outline-success fw-semibold rounded-3">Modifier</a>
+                                                <!-- Modal trigger button -->
+                                                <a type="button" class="btn btn-outline-danger fw-semibold rounded-3" data-bs-toggle="modal" data-bs-target="#modalId">
+                                                    Supprimer
+                                                </a>
+
+                                                <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" 
+                                                    role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="modalTitleId">Supprimer cet eleve</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">Les Paiements de cet eleve seront conservés dans l'historique.</div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                                                <button type="button" class="btn btn-danger">Supprimer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Souleymane Thiam</td>
+                                        <td>CE2 A</td>
+                                        <td>10/05/2016</td>
+                                        <td>Abourahmane Thiam</td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <p class="badge text-white bg-danger text-capitalize">en Retard</p>
+                                        </td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <div>
+                                                <a href="#" class="btn btn-outline-success fw-semibold rounded-3">Modifier</a>
+                                                <!-- Modal trigger button -->
+                                                <a type="button" class="btn btn-outline-danger fw-semibold rounded-3" data-bs-toggle="modal" data-bs-target="#modalId">
+                                                    Supprimer
+                                                </a>
+                                                <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" 
+                                                    role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="modalTitleId">Supprimer cet eleve</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">Les Paiements de cet eleve seront conservés dans l'historique.</div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                                                <button type="button" class="btn btn-danger">Supprimer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Awa Mbengue</td>
+                                        <td>CM1 A</td>
+                                        <td>10/05/2012</td>
+                                        <td>Khaly Sy</td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <p class="badge text-white bg-success text-capitalize">à Jour</p>
+                                        </td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <div>
+                                                <a href="#" class="btn btn-outline-success fw-semibold rounded-3">Modifier</a>
+                                                <!-- Modal trigger button -->
+                                                <a type="button" class="btn btn-outline-danger fw-semibold rounded-3" data-bs-toggle="modal" data-bs-target="#modalId">
+                                                    Supprimer
+                                                </a>
+
+                                                <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" 
+                                                    role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="modalTitleId">Supprimer cet eleve</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">Les Paiements de cet eleve seront conservés dans l'historique.</div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                                                <button type="button" class="btn btn-danger">Supprimer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Moussa Diop</td>
+                                        <td>CM2 B</td>
+                                        <td>10/05/2015</td>
+                                        <td>Demba Diop</td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <p class="badge text-white bg-success text-capitalize">à Jour</p>
+                                        </td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <div>
+                                                <a href="#" class="btn btn-outline-success fw-semibold rounded-3">Modifier</a>
+                                                <!-- Modal trigger button -->
+                                                <a type="button" class="btn btn-outline-danger fw-semibold rounded-3" data-bs-toggle="modal" data-bs-target="#modalId">
+                                                    Supprimer
+                                                </a>
+
+                                                <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" 
+                                                    role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="modalTitleId">Supprimer cet eleve</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">Les Paiements de cet eleve seront conservés dans l'historique.</div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                                                <button type="button" class="btn btn-danger">Supprimer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Coumba Dione</td>
+                                        <td>CM1 B</td>
+                                        <td>10/05/2014</td>
+                                        <td>Khadija Ba</td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <p class="badge text-white bg-success text-capitalize">à Jour</p>
+                                        </td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <div>
+                                                <a href="#" class="btn btn-outline-success fw-semibold rounded-3">Modifier</a>
+                                                <!-- Modal trigger button -->
+                                                <a type="button" class="btn btn-outline-danger fw-semibold rounded-3" data-bs-toggle="modal" data-bs-target="#modalId">
+                                                    Supprimer
+                                                </a>
+
+                                                <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" 
+                                                    role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="modalTitleId">Supprimer cet eleve</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">Les Paiements de cet eleve seront conservés dans l'historique.</div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                                                <button type="button" class="btn btn-danger">Supprimer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Maimouna Ndiaye</td>
+                                        <td>CE2 A</td>
+                                        <td>10/05/2016</td>
+                                        <td>Aly Ndiaye</td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <p class="badge text-white bg-success text-capitalize">à Jour</p>
+                                        </td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <div>
+                                                <a href="#" class="btn btn-outline-success fw-semibold rounded-3">Modifier</a>
+                                                <!-- Modal trigger button -->
+                                                <a type="button" class="btn btn-outline-danger fw-semibold rounded-3" data-bs-toggle="modal" data-bs-target="#modalId">
+                                                    Supprimer
+                                                </a>
+
+                                                <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" 
+                                                    role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="modalTitleId">Supprimer cet eleve</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">Les Paiements de cet eleve seront conservés dans l'historique.</div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                                                <button type="button" class="btn btn-danger">Supprimer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Sokhna Seck</td>
+                                        <td>CI A</td>
+                                        <td>10/05/2018</td>
+                                        <td>Mamadou Seck</td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <p class="badge text-dark bg-warning">Inscription non-payée</p>
+                                        </td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <div>
+                                                <a href="#" class="btn btn-outline-success fw-semibold rounded-3">Modifier</a>
+                                                <!-- Modal trigger button -->
+                                                <a type="button" class="btn btn-outline-danger fw-semibold rounded-3" data-bs-toggle="modal" data-bs-target="#modalId">
+                                                    Supprimer
+                                                </a>
+
+                                                <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" 
+                                                    role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="modalTitleId">Supprimer cet eleve</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">Les Paiements de cet eleve seront conservés dans l'historique.</div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                                                <button type="button" class="btn btn-danger">Supprimer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Hamidou Kane</td>
+                                        <td>4e A</td>
+                                        <td>15/07/2008</td>
+                                        <td>Mouhamed Kane</td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <p class="badge text-white bg-success text-capitalize">à Jour</p>
+                                        </td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <div>
+                                                <a href="#" class="btn btn-outline-success fw-semibold rounded-3">Modifier</a>
+                                                <!-- Modal trigger button -->
+                                                <a type="button" class="btn btn-outline-danger fw-semibold rounded-3" data-bs-toggle="modal" data-bs-target="#modalId">
+                                                    Supprimer
+                                                </a>
+
+                                                <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" 
+                                                    role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="modalTitleId">Supprimer cet eleve</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">Les Paiements de cet eleve seront conservés dans l'historique.</div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                                                <button type="button" class="btn btn-danger">Supprimer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>Assane dione</td>
+                                        <td>CP B</td>
+                                        <td>04/05/2010</td>
+                                        <td>Alassane Dione</td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <p class="badge text-white bg-success text-capitalize">à Jour</p>
+                                        </td>
+                                        <td class="d-lg-table-cell d-none">
+                                            <a href="#" class="btn btn-outline-success fw-semibold rounded-3">Modifier</a>
+                                                <!-- Modal trigger button -->
+                                                <a type="button" class="btn btn-outline-danger fw-semibold rounded-3" data-bs-toggle="modal" data-bs-target="#modalId">
+                                                    Supprimer
+                                                </a>
+
+                                                <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" 
+                                                    role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="modalTitleId">Supprimer cet eleve</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">Les Paiements de cet eleve seront conservés dans l'historique.</div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                                                <button type="button" class="btn btn-danger">Supprimer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+            </section>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

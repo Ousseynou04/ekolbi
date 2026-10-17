@@ -1,0 +1,116 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <title>Accueil</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-primary p-3">
+                <!-- barre de navigation -->
+                <div class="container">
+                    <a class="navbar-brand" href="#">Ecole Privée les Bâtisseurs</a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+                        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                            <li class="nav-item"><a class="nav-link" href="frais.html">Notre école et frais</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="inscription.html">inscription</a></li>
+                            <li class="nav-item"><a class="nav-link" href="gestion/connexion.html">Espace de gestion</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- section de Pré-inscription -->
+            <section>
+                <div class="container p-4">
+                    <div>
+                        <h2 class="mb-3">Pré-inscription</h2>
+                        <p class="p-3 bg-success-subtle text-success rounded-3 border border-success-subtle">Merci ! l'école vous rappelle dans les 48 heures.</p>
+                        <!-- formulaire de pré-inscription -->
+                        <div>
+                            <form action="#">
+                                <div class="border p-4 rounded-3">
+                                    <div class="row g-3 mb-3">
+                                        <div class="col-md-6">
+                                            <label for="prenom" class="form-label">prenom de l'enfant</label>
+                                            <input type="text" class="form-control" id="prenom" required>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="nom" class="form-label">Nom de l'enfant</label>
+                                            <input type="text" class="form-control" id="nom" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-3 mb-3">
+                                        <div class="col-md-6">
+                                            <label for="date" class="form-label">date de naissance</label>
+                                            <input type="date" class="form-control" id="date" required>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="classe" class="form-label">classe demandée</label>
+                                            <select class="form-select py-2" id="classe" required>
+                                                <option value="classe">Choisir une classe</option>
+                                                <option value="CIA" selected>CIA</option>
+                                                <option value="CIB">CIB</option>
+                                                <option value="CPA">CPA</option>
+                                                <option value="CPB">CPB</option>
+                                                <option value="CE1A">CE1A</option>
+                                                <option value="CE1B">CE1B</option>
+                                                <option value="CE2A">CE2A</option>
+                                                <option value="CE2B">CE2B</option>
+                                                <option value="CM1A">CM1A</option>
+                                                <option value="CM1B">CM1B</option>
+                                                <option value="CM2A">CM2A</option>
+                                                <option value="CM2B">CM2B</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-3 mb-3">
+                                        <div class="col-md-6">
+                                            <label for="nom-parent" class="form-label">nom du parent</label>
+                                            <input type="text" class="form-control" id="nom-parent" required>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="telephone" class="form-label">Téléphone</label>
+                                            <input type="tel" class="form-control" id="telephone" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="Message" class="form-label">Message (facultatif)</label>
+                                        <textarea class="form-control" id="Message" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary text-white rounded-3">Envoyer la demande</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="bg-dark">
+                <div class="container p-4 text-white">
+                    <span>Ecole Privée les Bâtisseurs - Keur Massar, à cote de la mosquée du quartier</span> <br>
+                    <span>Téléphone : 77 000 00 33 . E-mail : contact@lesbatisseurs.exemple.sn</span> <br>
+                    <span>Projet pedagogique . structure fictive</span>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </body>
+    </html>

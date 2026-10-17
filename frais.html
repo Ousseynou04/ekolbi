@@ -1,0 +1,101 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <title>Accueil</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-primary p-3">
+                <!-- barre de navigation -->
+                <div class="container">
+                    <a class="navbar-brand" href="#">Ecole Privée les Bâtisseurs</a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+                        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="frais.html">Notre école et frais</a></li>
+                            <li class="nav-item"><a class="nav-link" href="inscription.html">inscription</a></li>
+                            <li class="nav-item"><a class="nav-link" href="gestion/connexion.html">Espace de gestion</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- section école et frais d'inscription -->
+            <section>
+                <div class="container p-4">
+                    <!-- l'école -->
+                    <div class="py-4">
+                        <h2>Notre école</h2>
+                        <p>De la classe d'initiation à la troisieme, Les Bâtisseurs accueillent les élèves de Keur Massar et des quartiers Voisins.</p>
+                        <div class="row g-3">
+                            <!-- niveau primaire -->
+                            <div class="col-12 col-lg-6">
+                                <div class="border border-2 rounded-4 h-100 px-3 py-2">
+                                    <h5>Primaire</h5>
+                                    <p>Six niveaux, du CI au CM2, avec deux classes de CM2 pour préparée l'entrée en sixième.</p>
+                                </div>
+                            </div>
+                            <!-- niveau collège -->
+                            <div class="col-12 col-lg-6">
+                                <div class="border border-2 rounded-4 h-100 px-3 py-2">
+                                    <h5>Collège</h5>
+                                    <p>Quatres niveaux, de la 6e à la 3ème, avec deux classes de 3e pour préparer le BFEM.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- frais d'inscription -->
+                    <div>
+                        <h2>Frais de Scolarité</h2>
+                        <!-- tableau des frais d'inscription -->
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr class="table-dark">
+                                    <th>cycle</th>
+                                    <th>Inscription (FCFA)</th>
+                                    <th>Mensualité (FCFA)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Primaire (CI au CM2)</td>
+                                    <td>25000</td>
+                                    <td>12500</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Collège (6e à Troisième)</td>
+                                    <td>30000</td>
+                                    <td>17500</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="bg-info rounded-4 mb-5">
+                            <p class="px-5 py-3 ">Les mensualités se règlent avant le 5 de chaque mois, en espèce à l'école, par wave ou par Orange Money. Un reçu est remis pour chaque paiement.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="bg-dark">
+                <div class="container p-4 text-white">
+                    <span>Ecole Privée les Bâtisseurs - Keur Massar, à côté de la mosquée du quartier</span> <br>
+                    <span>Téléphone : 77 000 00 33 . E-mail : contact@lesbatisseurs.exemple.sn</span> <br>
+                    <span>Projet pedagogique . structure fictive</span>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </body>
+    </html>

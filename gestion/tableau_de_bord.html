@@ -1,0 +1,156 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <title>Accueil</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                <!-- barre de navigation -->
+                <div class="container-fluid d-flex align-items-center">
+                    <a class="navbar-brand fw-bold mt-1 ms-3" href="#">ekolbi.Gestion</a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+                        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav mt-2 me-auto">
+                            <li class="nav-item"><a class="nav-link active" href="tableau_de_bord.html">Tableau de Bord</a></li>
+                            <li class="nav-item"><a class="nav-link" href="eleves.html">Eleves</a></li>
+                            <li class="nav-item"><a class="nav-link" href="encaissement.html">Encaisser un paiement</a></li>
+                        </ul>
+                        <div class="d-flex mt-4"> 
+                            <p class="nav-item text-white">M. Abdoulaye Sow, directeur <a href="/index.html" class="text-white mx-3">Se déconnecter</a></p>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+            <!-- section d'authentification -->
+            <section class="bg-light"> 
+                    <div class="container p-4">
+                        <h2 class="mb-4">Tableau de Bord</h2>
+                        <div class="row g-3">
+                            <div class="col-12 col-lg-3">
+                                <div class="border h-100 rounded p-3 bg-white shadow-sm">
+                                    <p>Encaissé le mois dernier</p>
+                                    <h3 class="fw-bold">1 627 500 FCFA</h3>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <div class="border h-100 rounded p-3 bg-white shadow-sm">
+                                    <p>Montant des impayés</p>
+                                    <h3 class="text-danger fw-bold">165 000 FCFA</h3>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <div class="border h-100 rounded p-3 bg-white shadow-sm">
+                                    <p>Eleves en retard</p>
+                                    <h3 class="text-warning fw-bold">9</h3>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <div class="border h-100 rounded p-3 bg-white shadow-sm">
+                                    <p>Inscription non payées</p>
+                                    <h3 class="text-danger fw-bold">2</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="py-5">
+                            <h5>Eleves en retard</h5>
+                            <!-- tableau des eleves en retard de paiement -->
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr class="table-dark">
+                                        <th>Eleve</th>
+                                        <th>Classe</th>
+                                        <th class="text-end">Mois en reatrd</th>
+                                        <th class="text-end">Montant du (FCFA)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Penda Sy</td>
+                                        <td>CI A</td>
+                                        <td class="text-end fw-semibold">1</td>
+                                        <td class="text-end fw-semibold">12500</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Oumou Ndiaye</td>
+                                        <td>CP A</td>
+                                        <td class="text-end fw-semibold">1</td>
+                                        <td class="text-end fw-semibold">12500</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Abdou Ndiaye</td>
+                                        <td>CE1 A</td>
+                                        <td class="text-end fw-semibold">2</td>
+                                        <td class="text-end fw-semibold">25000</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Souleymane Thiam</td>
+                                        <td>CE2 A</td>
+                                        <td class="text-end fw-semibold">1</td>
+                                        <td class="text-end fw-semibold">12500</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Awa Mbengue</td>
+                                        <td>CM1 A</td>
+                                        <td class="text-end fw-semibold">1</td>
+                                        <td class="text-end fw-semibold">12500</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Moussa Diop</td>
+                                        <td>CM2 B</td>
+                                        <td class="text-end fw-semibold">1</td>
+                                        <td class="text-end fw-semibold">12500</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Coumba Dione</td>
+                                        <td>CM2 B</td>
+                                        <td class="text-end fw-semibold">2</td>
+                                        <td class="text-end fw-semibold">25000</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Maimouna Ndiaye</td>
+                                        <td>5e A</td>
+                                        <td class="text-end fw-semibold">1</td>
+                                        <td class="text-end fw-semibold">17500</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Sokhna Seck</td>
+                                        <td>CI A</td>
+                                        <td class="text-end fw-semibold">2</td>
+                                        <td class="text-end fw-semibold">35000</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th class="fw-bold">Total</th>
+                                        <th class="text-end fw-bold" colspan="2">12</th>
+                                        <th class="text-end fw-bold">165 000</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+            </section>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </body>
+    </html>

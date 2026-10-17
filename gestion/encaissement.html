@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <title>page eleve-form</title>
+</head>
+<body class="bg-light">
+
+    <header>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                <!-- barre de navigation -->
+                <div class="container-fluid d-flex align-items-center">
+                    <a class="navbar-brand fw-bold mt-1 ms-3" href="#">ekolbi.Gestion</a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+                        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav mt-2 me-auto">
+                            <li class="nav-item"><a class="nav-link" href="tableau_de_bord.html">Tableau de Bord</a></li>
+                            <li class="nav-item"><a class="nav-link" href="eleves.html">Eleves</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="encaissement.html">Encaisser un paiement</a></li>
+                        </ul>
+                        <div class="d-flex mt-4"> 
+                            <p class="nav-item text-white">M. Abdoulaye Sow, directeur <a href="/index.html" class="text-white mx-3">Se déconnecter</a></p>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- section d'encaissement -->
+        <section>
+            <div class="container p-4">
+                <h2 class="mb-3">Encaisser un paiement</h2>
+                <div class="row g-3">
+                    <div class="col-lg-7">
+                        <div class="rounded-3 border p-4 bg-white">
+                            <!-- formulaire d'encaissement -->
+                            <form action="#">
+                                <div class=" mb-3">
+                                    <label for="nom" class="form-label">élève</label>
+                                    <select class="form-select" id="nom" required>
+                                        <option value="élève" selected>Penda Sy (CI A)</option>
+                                        <option value="élève">Abdou thiam (CI A)</option>
+                                        <option value="élève">Mamadou (CI B)</option>
+                                        <option value="eleve">Lamine Ba (CP A)</option>
+                                        <option value="eleve">Alpha Diallo (CP B)</option>
+                                    </select>
+                                </div>
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-6">
+                                        <label for="type" class="form-label">type</label>
+                                        <select class="form-select" id="type" required>
+                                            <option value="mensualité" selected>Mensualité</option>
+                                            <option value="Annuelle">Annuelle</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="mois" class="form-label">Mois</label>
+                                        <select class="form-select py-2" id="mois" required>
+                                            <option value="septembre" selected>septembre 2026</option>
+                                            <option value="Octobre">Octobre 2026</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-6"> 
+                                        <label for="montant" class="form-label">Montant (FCFA)</label>
+                                        <input type="number" value="12500" class="form-control" id="montant">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="paiement" class="form-label">mode de paiement</label>
+                                        <select class="form-select py-2" id="paiement" required>
+                                            <option value="wave" selected>wave</option>
+                                            <option value="OrangeMoney">Orange Money</option>
+                                            <option value="espece">en espece</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <a type="submit" href="#" class="btn btn-primary rounded-3">Encaisser et imprimer le reçu</a>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- paiement -->
+                    <div class="col-lg-5">
+                        <div class=" border border-danger h-lg-50 h-75 bg-white p-3 rounded mb-3">
+                            <h5>Famille Sy (parent : Khady Sy)</h5>
+                            <div class="d-flex justify-content-between px-3">
+                                <span>Penda Sy, CI A</span>
+                                <span class="badge bg-danger">1 mois de retard</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between mb-3 px-3">
+                                <span>Ousmane Sy, CI A</span>
+                                <span class="badge bg-success text-capitalize">à jour</span>
+                            </div>
+                            <p class="fw-bold">Reste à payer : 12500 FCFA</p>
+                        </div>
+                        <!-- Reçu -->
+                        <div class="rounded bg-secondary-subtle">
+                            <p class="p-3">Prochain reçu : n° R00347</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
